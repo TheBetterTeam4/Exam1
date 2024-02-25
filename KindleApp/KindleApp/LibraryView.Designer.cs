@@ -31,7 +31,7 @@ namespace KindleApp
         private void InitializeComponent()
         {
             uxName = new Label();
-            UxBookList = new ListBox();
+            uxBookList = new ListBox();
             uxSynchronize = new Button();
             uxOpen = new Button();
             SuspendLayout();
@@ -48,15 +48,16 @@ namespace KindleApp
             uxName.Text = "My Library";
             uxName.TextAlign = ContentAlignment.TopCenter;
             // 
-            // UxBookList
+            // uxBookList
             // 
-            UxBookList.Font = new Font("Segoe UI Historic", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            UxBookList.FormattingEnabled = true;
-            UxBookList.ItemHeight = 28;
-            UxBookList.Location = new Point(55, 59);
-            UxBookList.Name = "UxBookList";
-            UxBookList.Size = new Size(477, 620);
-            UxBookList.TabIndex = 1;
+            uxBookList.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            uxBookList.Font = new Font("Segoe UI Historic", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            uxBookList.FormattingEnabled = true;
+            uxBookList.ItemHeight = 28;
+            uxBookList.Location = new Point(55, 59);
+            uxBookList.Name = "uxBookList";
+            uxBookList.Size = new Size(477, 620);
+            uxBookList.TabIndex = 1;
             // 
             // uxSynchronize
             // 
@@ -93,9 +94,10 @@ namespace KindleApp
             ClientSize = new Size(584, 861);
             Controls.Add(uxOpen);
             Controls.Add(uxSynchronize);
-            Controls.Add(UxBookList);
+            Controls.Add(uxBookList);
             Controls.Add(uxName);
             Name = "LibraryView";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "BookView";
             ResumeLayout(false);
             PerformLayout();
@@ -104,7 +106,7 @@ namespace KindleApp
         private Label uxName;
         #endregion
 
-        private ListBox UxBookList;
+        private ListBox uxBookList;
         private Button uxSynchronize;
         private Button uxOpen;
     }

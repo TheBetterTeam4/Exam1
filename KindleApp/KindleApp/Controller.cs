@@ -23,7 +23,7 @@ namespace KindleApp
         public void OpenBook(int id)
         {
             int lp = model.MyLibrary[id].LastPage;
-            BookView book = new(UpdatePageText, id, lp);
+            BookView book = new(UpdatePageText, id, lp, model.MyLibrary[id].BookName);
             book.ShowDialog();
         }
 

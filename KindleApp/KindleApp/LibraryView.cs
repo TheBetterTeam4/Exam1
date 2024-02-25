@@ -18,20 +18,21 @@ namespace KindleApp
         {
             List<Book> lib = SyncDel();
 
-            UxBookList.Items.Clear();
+            uxBookList.Items.Clear();
 
             foreach (var item in lib)
             {
-                UxBookList.Items.Add(item.BookName);
+                uxBookList.Items.Add(item.BookName);
             }
-            
+
         }
 
         private void uxOpen_Click(object sender, EventArgs e)
         {
-            openBookDel(UxBookList.SelectedIndex);
+            if (uxBookList.SelectedIndex != -1)
+            {
+                openBookDel(uxBookList.SelectedIndex);
+            }
         }
-
-        
     }
 }

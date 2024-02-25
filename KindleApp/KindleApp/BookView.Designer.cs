@@ -94,6 +94,7 @@
             Controls.Add(uxPageText);
             Controls.Add(uxName);
             Name = "BookView";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "BookView";
             ResumeLayout(false);
             PerformLayout();
