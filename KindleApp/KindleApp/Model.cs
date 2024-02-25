@@ -13,7 +13,7 @@ namespace KindleApp
 
         public Model()
         {
-           
+            FillLibrary();
         } 
 
         public void FillLibrary()

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KindleApp
 {
-    internal class Book
+    public class Book
     {
         public string BookName { get; set; }
         public int LastPage { get; set; }

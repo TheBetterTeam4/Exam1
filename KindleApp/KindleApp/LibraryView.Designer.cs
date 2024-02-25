@@ -33,6 +33,7 @@ namespace KindleApp
             uxName = new Label();
             UxBookList = new ListBox();
             uxSynchronize = new Button();
+            uxOpen = new Button();
             SuspendLayout();
             // 
             // uxName
@@ -69,12 +70,28 @@ namespace KindleApp
             uxSynchronize.Text = "Synchronize";
             uxSynchronize.TextAlign = ContentAlignment.TopCenter;
             uxSynchronize.UseVisualStyleBackColor = true;
+            uxSynchronize.Click += uxSynchronize_Click;
+            // 
+            // uxOpen
+            // 
+            uxOpen.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            uxOpen.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            uxOpen.Font = new Font("Segoe UI Historic", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            uxOpen.Location = new Point(222, 725);
+            uxOpen.Name = "uxOpen";
+            uxOpen.Size = new Size(136, 34);
+            uxOpen.TabIndex = 3;
+            uxOpen.Text = "Open";
+            uxOpen.TextAlign = ContentAlignment.TopCenter;
+            uxOpen.UseVisualStyleBackColor = true;
+            uxOpen.Click += uxOpen_Click;
             // 
             // LibraryView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(584, 861);
+            Controls.Add(uxOpen);
             Controls.Add(uxSynchronize);
             Controls.Add(UxBookList);
             Controls.Add(uxName);
@@ -89,5 +106,6 @@ namespace KindleApp
 
         private ListBox UxBookList;
         private Button uxSynchronize;
+        private Button uxOpen;
     }
 }

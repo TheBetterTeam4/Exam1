@@ -30,9 +30,9 @@
         {
             uxName = new Label();
             uxPageText = new Label();
-            button1 = new Button();
-            label2 = new Label();
-            button2 = new Button();
+            uxNextPage = new Button();
+            uxPageNum = new Label();
+            uxPrevPage = new Button();
             SuspendLayout();
             // 
             // uxName
@@ -54,42 +54,43 @@
             uxPageText.Size = new Size(560, 732);
             uxPageText.TabIndex = 1;
             // 
-            // button1
+            // uxNextPage
             // 
-            button1.Location = new Point(497, 826);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Next Page";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            uxNextPage.Location = new Point(497, 826);
+            uxNextPage.Name = "uxNextPage";
+            uxNextPage.Size = new Size(75, 23);
+            uxNextPage.TabIndex = 2;
+            uxNextPage.Text = "Next Page";
+            uxNextPage.UseVisualStyleBackColor = true;
+            uxNextPage.Click += uxNextPage_Click;
             // 
-            // label2
+            // uxPageNum
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(279, 830);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 3;
-            label2.Text = "label2";
+            uxPageNum.AutoSize = true;
+            uxPageNum.Location = new Point(279, 830);
+            uxPageNum.Name = "uxPageNum";
+            uxPageNum.Size = new Size(38, 15);
+            uxPageNum.TabIndex = 3;
+            uxPageNum.Text = "label2";
             // 
-            // button2
+            // uxPrevPage
             // 
-            button2.Location = new Point(12, 826);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 4;
-            button2.Text = "Next Page";
-            button2.UseVisualStyleBackColor = true;
+            uxPrevPage.Location = new Point(12, 826);
+            uxPrevPage.Name = "uxPrevPage";
+            uxPrevPage.Size = new Size(75, 23);
+            uxPrevPage.TabIndex = 4;
+            uxPrevPage.Text = "Prev Page";
+            uxPrevPage.UseVisualStyleBackColor = true;
+            uxPrevPage.Click += uxPrevPage_Click;
             // 
             // BookView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(584, 861);
-            Controls.Add(button2);
-            Controls.Add(label2);
-            Controls.Add(button1);
+            Controls.Add(uxPrevPage);
+            Controls.Add(uxPageNum);
+            Controls.Add(uxNextPage);
             Controls.Add(uxPageText);
             Controls.Add(uxName);
             Name = "BookView";
@@ -102,8 +103,8 @@
 
         private Label uxName;
         private Label uxPageText;
-        private Button button1;
-        private Label label2;
-        private Button button2;
+        private Button uxNextPage;
+        private Label uxPageNum;
+        private Button uxPrevPage;
     }
 }
