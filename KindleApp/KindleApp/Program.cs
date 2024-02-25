@@ -1,9 +1,12 @@
 namespace KindleApp
 {
-    internal static class Program
-    {
-        internal delegate void OpenBookDEL(int id);
 
+    public delegate void OpenBookDEL(int id);
+    public delegate string GoToDEL(int id, int pageNum);
+
+
+    public static class Program
+    {
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -13,7 +16,10 @@ namespace KindleApp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new LibraryView());
+
+            Controller c = new();
+
+            Application.Run(new BookView(c.UpdatePage));
         }
     }
 }
