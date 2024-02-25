@@ -32,6 +32,7 @@
             uxPageText = new Label();
             button1 = new Button();
             label2 = new Label();
+            button2 = new Button();
             SuspendLayout();
             // 
             // uxName
@@ -72,11 +73,21 @@
             label2.TabIndex = 3;
             label2.Text = "label2";
             // 
+            // button2
+            // 
+            button2.Location = new Point(12, 826);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 4;
+            button2.Text = "Next Page";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // BookView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(584, 861);
+            Controls.Add(button2);
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(uxPageText);
@@ -93,5 +104,6 @@
         private Label uxPageText;
         private Button button1;
         private Label label2;
+        private Button button2;
     }
 }

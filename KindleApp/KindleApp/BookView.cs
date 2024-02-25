@@ -29,7 +29,7 @@ namespace KindleApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            uxPageText.Text = goToPageDel(BookId, LastPage+1);
+            uxPageText.Text = goToPageDel(BookId, LastPage + 1);
 
         }
     }
