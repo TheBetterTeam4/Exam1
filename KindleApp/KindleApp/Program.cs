@@ -6,7 +6,7 @@ namespace KindleApp
     public delegate void OpenBookDEL(int id);
     public delegate List<Book> SyncDEL();
     public delegate string GoToDEL(int id, int pageNum);
-
+    //public delegate void BookMarkDEL(bool addOrRemove, int pageNum);
 
     public static class Program
     {

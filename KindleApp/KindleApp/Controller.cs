@@ -38,5 +38,7 @@ namespace KindleApp
 
             return ret;
         }
+
+        //public void AddRemoveMark(bool addOrRemove, int pageNum) {}
     }
 }

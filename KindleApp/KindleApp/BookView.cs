@@ -15,43 +15,43 @@ namespace KindleApp
 
         private GoToDEL goToPageDel;
 
-        private int BookId;
-        private int LastPage;
+        private int bookId;
+        private int lastPage;
 
         public BookView(GoToDEL goToPageDel, int id, int lp, string bookName)
         {
             InitializeComponent();
             this.goToPageDel = goToPageDel;
-            this.BookId = id;
-            this.LastPage = lp;
+            this.bookId = id;
+            this.lastPage = lp;
             uxName.Text = bookName;
 
-            UpdateView(goToPageDel(BookId, LastPage));
+            UpdateView(goToPageDel(bookId, lastPage));
         }
 
         private void uxNextPage_Click(object sender, EventArgs e)
         {
-            string s = goToPageDel(BookId, LastPage + 1);
+            string s = goToPageDel(bookId, lastPage + 1);
             if (s != "The End")
             {
-                LastPage += 1;
+                lastPage += 1;
             }
             UpdateView(s);
         }
 
         private void uxPrevPage_Click(object sender, EventArgs e)
         {
-            if (LastPage > 0)
+            if (lastPage > 0)
             {
-                LastPage -= 1;
-                UpdateView(goToPageDel(BookId, LastPage));
+                lastPage -= 1;
+                UpdateView(goToPageDel(bookId, lastPage));
             }
         }
 
         private void UpdateView(string text)
         {
             uxPageText.Text = text;
-            uxPageNum.Text = "Page " + (LastPage + 1);
+            uxPageNum.Text = "Page " + (lastPage + 1);
         }
     }
 }
