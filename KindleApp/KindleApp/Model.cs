@@ -98,11 +98,11 @@ namespace KindleApp
             #endregion
 
 
-            Book newBook = new("The Good Book", 0, new List<int>(), str1);
+            Book newBook = new("The Good Book", 0, new List<Bookmark>(), str1);
 
-            MyLibrary.Add(0, new Book("Book One", 0, new List<int>(), str1));
-            MyLibrary.Add(1, new Book("Book Two", 0, new List<int>(), str1));
-            MyLibrary.Add(2, new Book("Book Three", 0, new List<int>(), str1));
+            MyLibrary.Add(0, new Book("Book One", 0, new List<Bookmark>(), str1));
+            MyLibrary.Add(1, new Book("Book Two", 0, new List<Bookmark>(), str1));
+            MyLibrary.Add(2, new Book("Book Three", 0, new List<Bookmark>(), str1));
         }
 
     }
