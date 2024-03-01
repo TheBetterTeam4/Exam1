@@ -4,13 +4,13 @@ namespace KindleApp
 {
     public partial class LibraryView : Form
     {
-        private OpenBookDEL openBookDel;
+        private OpenBookDEL OpenBookDel;
         private SyncDEL SyncDel;
 
         public LibraryView(OpenBookDEL openBookDel, SyncDEL SyncDel)
         {
             InitializeComponent();
-            this.openBookDel = openBookDel;
+            this.OpenBookDel = openBookDel;
             this.SyncDel = SyncDel;
         }
 
@@ -31,7 +31,7 @@ namespace KindleApp
         {
             if (uxBookList.SelectedIndex != -1)
             {
-                openBookDel(uxBookList.SelectedIndex);
+                OpenBookDel(uxBookList.SelectedIndex);
             }
         }
     }

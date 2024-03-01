@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KindleApp
 {
-    internal class Controller
+    public class Controller
     {
         private Model model = new Model();
 
@@ -23,7 +23,7 @@ namespace KindleApp
         public void OpenBook(int id)
         {
             int lp = model.MyLibrary[id].LastPage;
-            BookView book = new(UpdatePageText, id, lp, model.MyLibrary[id].BookName);
+            BookView book = new(UpdatePageText, id, lp, model.MyLibrary[id].BookName, AddRemoveMark, ReturnMarks);
             book.ShowDialog();
         }
 
@@ -39,6 +39,31 @@ namespace KindleApp
             return ret;
         }
 
-        //public void AddRemoveMark(bool addOrRemove, int pageNum) {}
+        public void AddRemoveMark(int bookId, bool addOrRemove, int pageNum)
+        {
+            Bookmark mark = new(pageNum);
+            if (addOrRemove && model.MyLibrary[bookId].BookMarks.Count <= 5)
+            {
+                model.MyLibrary[bookId].BookMarks.Add(mark);
+
+            }
+            else if (!addOrRemove)
+            {
+                List<Bookmark> newList = new();
+                foreach(var item in model.MyLibrary[bookId].BookMarks)
+                {
+                    if (item.PageNum != mark.PageNum)
+                    {
+                        newList.Add(item);
+                    }
+                }
+                model.MyLibrary[bookId].BookMarks = newList;
+            }
+        }
+
+        private List<Bookmark> ReturnMarks(int bookId)
+        {
+            return model.MyLibrary[bookId].BookMarks;
+        }
     }
 }

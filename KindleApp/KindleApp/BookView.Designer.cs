@@ -41,8 +41,8 @@
             uxMark5 = new Button();
             uxMarkLabel = new Label();
             flowLayoutPanel2 = new FlowLayoutPanel();
-            button1 = new Button();
-            button2 = new Button();
+            uxAddMark = new Button();
+            uxRemoveMark = new Button();
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             SuspendLayout();
@@ -115,6 +115,8 @@
             uxMark1.TabIndex = 0;
             uxMark1.Text = "b1";
             uxMark1.UseVisualStyleBackColor = true;
+            uxMark1.Visible = false;
+            uxMark1.Click += uxMark1_Click;
             // 
             // uxMark2
             // 
@@ -124,6 +126,8 @@
             uxMark2.TabIndex = 1;
             uxMark2.Text = "b2";
             uxMark2.UseVisualStyleBackColor = true;
+            uxMark2.Visible = false;
+            uxMark2.Click += uxMark2_Click;
             // 
             // uxMark3
             // 
@@ -133,6 +137,8 @@
             uxMark3.TabIndex = 2;
             uxMark3.Text = "b3";
             uxMark3.UseVisualStyleBackColor = true;
+            uxMark3.Visible = false;
+            uxMark3.Click += uxMark3_Click;
             // 
             // uxMark4
             // 
@@ -142,6 +148,8 @@
             uxMark4.TabIndex = 3;
             uxMark4.Text = "b4";
             uxMark4.UseVisualStyleBackColor = true;
+            uxMark4.Visible = false;
+            uxMark4.Click += uxMark4_Click;
             // 
             // uxMark5
             // 
@@ -151,6 +159,8 @@
             uxMark5.TabIndex = 4;
             uxMark5.Text = "b5";
             uxMark5.UseVisualStyleBackColor = true;
+            uxMark5.Visible = false;
+            uxMark5.Click += uxMark5_Click;
             // 
             // uxMarkLabel
             // 
@@ -164,30 +174,32 @@
             // 
             // flowLayoutPanel2
             // 
-            flowLayoutPanel2.Controls.Add(button1);
-            flowLayoutPanel2.Controls.Add(button2);
+            flowLayoutPanel2.Controls.Add(uxAddMark);
+            flowLayoutPanel2.Controls.Add(uxRemoveMark);
             flowLayoutPanel2.Location = new Point(12, 719);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Size = new Size(253, 29);
             flowLayoutPanel2.TabIndex = 7;
             // 
-            // button1
+            // uxAddMark
             // 
-            button1.Location = new Point(3, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(105, 23);
-            button1.TabIndex = 0;
-            button1.Text = "Add Bookmark";
-            button1.UseVisualStyleBackColor = true;
+            uxAddMark.Location = new Point(3, 3);
+            uxAddMark.Name = "uxAddMark";
+            uxAddMark.Size = new Size(105, 23);
+            uxAddMark.TabIndex = 0;
+            uxAddMark.Text = "Add Bookmark";
+            uxAddMark.UseVisualStyleBackColor = true;
+            uxAddMark.Click += uxAddMark_Click;
             // 
-            // button2
+            // uxRemoveMark
             // 
-            button2.Location = new Point(114, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(115, 23);
-            button2.TabIndex = 1;
-            button2.Text = "Remove Bookmark";
-            button2.UseVisualStyleBackColor = true;
+            uxRemoveMark.Location = new Point(114, 3);
+            uxRemoveMark.Name = "uxRemoveMark";
+            uxRemoveMark.Size = new Size(115, 23);
+            uxRemoveMark.TabIndex = 1;
+            uxRemoveMark.Text = "Remove Bookmark";
+            uxRemoveMark.UseVisualStyleBackColor = true;
+            uxRemoveMark.Click += uxRemoveMark_Click;
             // 
             // BookView
             // 
@@ -219,14 +231,14 @@
         private Label uxPageNum;
         private Button uxPrevPage;
         private FlowLayoutPanel flowLayoutPanel1;
-        private Button uxMark1;
-        private Button uxMark2;
-        private Button uxMark3;
-        private Button uxMark4;
-        private Button uxMark5;
+        public Button uxMark1;
+        public Button uxMark2;
+        public Button uxMark3;
+        public Button uxMark4;
+        public Button uxMark5;
         private Label uxMarkLabel;
         private FlowLayoutPanel flowLayoutPanel2;
-        private Button button1;
-        private Button button2;
+        private Button uxAddMark;
+        private Button uxRemoveMark;
     }
 }
